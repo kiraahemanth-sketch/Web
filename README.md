@@ -148,6 +148,20 @@ OTAKUSTAR is designed to be easily updated by modifying the HTML structure in `s
 </div>
 ```
 
+### 🗡️ Updating Attack on Titan Season Links
+1. Open `src/aot.html`.
+2. Find the `<div class="resolution-btns">` for the desired season.
+3. Replace the `href="#"` in the `<a>` tags with your actual watch links.
+
+**Example:**
+```html
+<div class="resolution-btns">
+    <a href="YOUR_480P_LINK" class="res-btn" data-res="480p">480P</a>
+    <a href="YOUR_720P_LINK" class="res-btn" data-res="720p">720P</a>
+    <a href="YOUR_1080P_LINK" class="res-btn" data-res="1080p">1080P</a>
+</div>
+```
+
 ## 📜 License
 
 This project is open-source and available under the MIT License.
