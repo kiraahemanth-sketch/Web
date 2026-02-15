@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Dreams | Anime Universe</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="sakura-container"></div>
+
+    <header>
+        <nav>
+            <div class="logo">SAKURA<span>DREAMS</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#episodes">Episodes</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Search anime...">
+                <i class="fas fa-search"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Explore the Anime World">Explore the Anime World</h1>
+                <p>Discover the most breathtaking stories, iconic characters, and stunning animations.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn primary">Watch Now</a>
+                    <a href="#" class="btn secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1541562232579-512a21360020?auto=format&fit=crop&w=800&q=80" alt="Hero Anime Illustration">
+            </div>
+        </section>
+
+        <section id="characters" class="featured-characters">
+            <h2 class="section-title">Featured Characters</h2>
+            <div class="character-grid">
+                <!-- Character 1 -->
+                <div class="char-card">
+                    <div class="char-img">
+                        <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?auto=format&fit=crop&w=400&q=80" alt="Kaelith">
+                    </div>
+                    <div class="char-info">
+                        <h3>Kaelith</h3>
+                        <p>The Silver Blade</p>
+                        <div class="char-stats">
+                            <span><i class="fas fa-fire"></i> Power: 95</span>
+                            <span><i class="fas fa-wind"></i> Speed: 88</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Character 2 -->
+                <div class="char-card">
+                    <div class="char-img">
+                        <img src="https://images.unsplash.com/photo-1541562232579-512a21360020?auto=format&fit=crop&q=80&w=1000" alt="Aria">
+                    </div>
+                    <div class="char-info">
+                        <h3>Aria</h3>
+                        <p>Star Weaver</p>
+                        <div class="char-stats">
+                            <span><i class="fas fa-magic"></i> Mana: 99</span>
+                            <span><i class="fas fa-shield-alt"></i> Def: 72</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Character 3 -->
+                <div class="char-card">
+                    <div class="char-img">
+                        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&q=80" alt="Zenthos">
+                    </div>
+                    <div class="char-info">
+                        <h3>Zenthos</h3>
+                        <p>Shadow Rogue</p>
+                        <div class="char-stats">
+                            <span><i class="fas fa-bolt"></i> Agility: 97</span>
+                            <span><i class="fas fa-eye-slash"></i> Stealth: 94</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="latest-news">
+            <h2 class="section-title">Latest Updates</h2>
+            <div class="news-container">
+                <article class="news-item">
+                    <div class="news-date">Oct 24, 2023</div>
+                    <h3>Season 4 Premiere Announced!</h3>
+                    <p>The wait is finally over. Sakura Dreams: Rebirth will premiere this December. Get ready for the most intense season yet as Kaelith faces his past.</p>
+                    <a href="#">Read more <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="news-item">
+                    <div class="news-date">Oct 20, 2023</div>
+                    <h3>New Character Designs Revealed</h3>
+                    <p>Check out the stunning new looks for the upcoming "Star Weaver" movie arc. Aria's new outfit features glowing nebula patterns!</p>
+                    <a href="#">Read more <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="news-item">
+                    <div class="news-date">Oct 15, 2023</div>
+                    <h3>Global Fan Art Contest</h3>
+                    <p>Show us your creativity! Submit your Sakura Dreams fan art for a chance to be featured in the official artbook.</p>
+                    <a href="#">Join Contest <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">SAKURA<span>DREAMS</span></div>
+            <p>&copy; 2023 Sakura Dreams. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
