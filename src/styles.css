@@ -18,6 +18,13 @@
     box-sizing: border-box;
 }
 
+/* Selection Highlight */
+::selection {
+    background: var(--primary);
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
 /* Premium Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -115,14 +122,25 @@ nav {
 
 .logo {
     font-family: 'Syne', sans-serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 800;
     letter-spacing: -1px;
-    text-shadow: 0 0 15px var(--primary-glow);
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00d2ff, #4b0082, #ff0075);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text 8s linear infinite;
+    text-shadow: 0 0 30px rgba(255, 45, 117, 0.3);
 }
 
 .logo span {
-    color: var(--primary);
+    color: inherit;
+}
+
+@keyframes rainbow-text {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .nav-links {
@@ -301,10 +319,12 @@ nav {
 }
 
 .btn.primary {
-    background: linear-gradient(135deg, var(--primary), #ff5e95);
+    background: linear-gradient(90deg, var(--primary), #ff00e1, var(--secondary), var(--primary));
+    background-size: 300% 100%;
     color: white;
     box-shadow: 0 8px 25px var(--primary-glow);
     border: none;
+    animation: rainbow-text 4s linear infinite;
 }
 
 .btn.primary:hover {
@@ -380,10 +400,13 @@ nav {
     bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 120px;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    box-shadow: 0 0 15px var(--primary-glow);
+    background: linear-gradient(90deg, #ff0000, #00d2ff, #ff0075, #ff0000);
+    background-size: 300% 100%;
+    animation: rainbow-text 3s linear infinite;
+    box-shadow: 0 0 20px var(--primary-glow);
+    border-radius: 2px;
 }
 
 .section-title::before {

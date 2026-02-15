@@ -94,6 +94,60 @@ playwright install chromium
 python3 tests/verify_otakustar.py
 ```
 
+## 🎮 Website Usage & Control
+
+OTAKUSTAR is a fully responsive, interactive anime landing page. Here is how to navigate and control it:
+
+- **Navigation**: Use the top navigation bar to jump to different sections (Home, Characters, News, Episodes). On mobile, the site optimizes for vertical scrolling.
+- **Search**: The search bar in the header allows you to simulate searching for your favorite titles (UI only).
+- **Interactions**:
+  - Hover over **Character Cards** to see them glow and float.
+  - Scroll down to trigger **reveal animations** for each section.
+  - Watch the **falling sakura petals** create a peaceful atmosphere.
+- **Security**: The "Watch Now" button is protected by **Google reCAPTCHA v3**. When clicked, it verifies your session and displays a confirmation toast.
+
+## ✍️ Content Management Guide (Blog-style Editing)
+
+OTAKUSTAR is designed to be easily updated by modifying the HTML structure in `src/index.html`. Follow these steps to "post" new content:
+
+### 🆕 Adding a New Blog/News Post
+1. Open `src/index.html`.
+2. Locate the `<div class="news-container">` section.
+3. Copy and paste an existing `<article class="news-item">` block.
+4. Update the date, title, description, and link.
+
+**Code Template:**
+```html
+<article class="news-item">
+    <div class="news-date">Month DD, YYYY</div>
+    <h3>Post Title Here</h3>
+    <p>Your content description goes here...</p>
+    <a href="#">Read more <i class="fas fa-arrow-right"></i></a>
+</article>
+```
+
+### 👤 Adding a New Character
+1. Locate the `<div class="character-grid">` section.
+2. Copy and paste an existing `<div class="char-card">` block.
+3. Update the image URL, name, title, and stats.
+
+**Code Template:**
+```html
+<div class="char-card">
+    <div class="char-img">
+        <img src="IMAGE_URL_HERE" alt="Name">
+    </div>
+    <div class="char-info">
+        <h3>Character Name</h3>
+        <p>Character Title</p>
+        <div class="char-stats">
+            <span><i class="fas fa-fire"></i> Stat 1: Value</span>
+            <span><i class="fas fa-wind"></i> Stat 2: Value</span>
+        </div>
+    </div>
+</div>
+```
+
 ## 📜 License
 
 This project is open-source and available under the MIT License.
