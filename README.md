@@ -1,9 +1,10 @@
-# Sakura Dreams - Premium Anime Landing Page
+# OTAKUSTAR - Ultimate Premium Anime Landing Page
 
-A beautiful, high-end anime-themed landing page featuring modern web effects, glassmorphism, and a premium aesthetic.
+A beautiful, high-end anime-themed landing page featuring modern web effects, glassmorphism, and a premium aesthetic. Dedicated to the ultimate anime fans at OTAKUSTAR.com.
 
 ## ✨ Features
 
+- **🛡️ Google reCAPTCHA v3**: Built-in security integration for bot protection.
 - **🌸 Interactive Sakura Effects**: Smooth, performance-optimized falling cherry blossom petals powered by Anime.js.
 - **💎 Glassmorphism Design**: Modern UI with frosted glass effects, deep backdrop blurs, and neon glowing borders.
 - **🎭 Character Showcase**: Elegant character cards with hover effects and scroll-triggered animations.
@@ -37,13 +38,22 @@ You can easily serve the website using Docker:
 
 ```bash
 # Build the image
-docker build -t sakura-dreams .
+docker build -t otakustar .
 
 # Run the container
-docker run -d -p 8080:80 sakura-dreams
+docker run -d -p 8080:80 otakustar
 ```
 
 Then visit `http://localhost:8080` in your browser.
+
+## 🛡️ Security Note (reCAPTCHA v3)
+
+Google reCAPTCHA v3 is integrated into this site.
+- **Site Key**: `6LdsQmwsAAAAADkfFk-bubhm4D9VuL9at3ZYdQZx`
+- **Frontend**: The `script.js` handles token generation on page load and button clicks.
+- **Backend Verification**: You must use your **Secret Key** on your backend server to verify the tokens.
+  - Ensure the Secret Key is stored securely as an environment variable (e.g., `RECAPTCHA_SECRET_KEY`).
+  - **Security Warning**: Never expose the Secret Key in frontend code or commit it to a public repository.
 
 ## 🌐 Deployment Guide
 
@@ -81,7 +91,7 @@ pip install playwright pytest
 playwright install chromium
 
 # Run automated checks
-python3 tests/check_elements.py
+python3 tests/verify_otakustar.py
 ```
 
 ## 📜 License

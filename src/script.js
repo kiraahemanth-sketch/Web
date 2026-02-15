@@ -112,4 +112,45 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('scrolled');
         }
     });
+
+    // Toast Function
+    function showToast(message) {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = message;
+        container.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(20px)';
+            toast.style.transition = 'all 0.3s ease';
+            setTimeout(() => toast.remove(), 300);
+        }, 4000);
+    }
+
+    // Google reCAPTCHA v3 Implementation
+    if (typeof grecaptcha !== 'undefined') {
+        grecaptcha.ready(function() {
+            // Execute on initial load for baseline
+            grecaptcha.execute('6LdsQmwsAAAAADkfFk-bubhm4D9VuL9at3ZYdQZx', {action: 'homepage'})
+                .then(function(token) {
+                    // console.log('reCAPTCHA token generated for homepage');
+                });
+
+            // Execute on primary action
+            const watchBtn = document.querySelector('.btn.primary');
+            if (watchBtn) {
+                watchBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    grecaptcha.execute('6LdsQmwsAAAAADkfFk-bubhm4D9VuL9at3ZYdQZx', {action: 'watch_now'})
+                        .then(function(token) {
+                            showToast('OTAKUSTAR Security: reCAPTCHA verified.');
+                            console.log('Token:', token);
+                            // In a real app, you would send this token to your backend
+                        });
+                });
+            }
+        });
+    }
 });

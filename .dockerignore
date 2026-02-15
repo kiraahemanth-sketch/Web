@@ -1,12 +1,9 @@
-node_modules
+.git
+.github
 tests
 test-results
 playwright-report
-.git
-.github
 README.md
 Dockerfile
 .dockerignore
-package.json
-package-lock.json
-playwright.config.js
+verification/
