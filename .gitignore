@@ -1,0 +1,8 @@
+# Testing artifacts
+tests/__pycache__/
+test-results/
+*.png
+
+# Environment
+.env
+venv/
