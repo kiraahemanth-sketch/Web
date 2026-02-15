@@ -59,10 +59,17 @@ Since the project source is in the `src/` directory, the easiest way to deploy i
 ### ⚡ Deploying to Netlify / Vercel / Render
 
 1. Connect your GitHub repository to Netlify, Vercel, or Render.
-2. Configure the **Build Settings**:
-   - **Build Command**: (Leave blank)
-   - **Publish Directory**: `src`
-3. Click **Deploy**.
+2. **IMPORTANT**: Configure the **Publish Directory** (or **Root Directory**) to `src`.
+   - If you don't do this, you will get a "Page Not Found" (404) error because the website files are inside the `src` folder.
+   - For Netlify, a `netlify.toml` is included to handle this automatically.
+   - For Vercel, set the "Root Directory" to `src` in your project settings.
+3. **Build Command**: Leave blank.
+4. Click **Deploy**.
+
+#### 📂 Note on Drag-and-Drop
+If you are using Netlify's "Drag and Drop" feature instead of Git:
+- **Do not** drag the whole project folder.
+- **Only** drag the contents of the `src` folder.
 
 ## 🧪 Testing
 
