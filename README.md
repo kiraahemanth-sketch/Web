@@ -45,6 +45,25 @@ docker run -d -p 8080:80 sakura-dreams
 
 Then visit `http://localhost:8080` in your browser.
 
+## 🌐 Deployment Guide
+
+### 🐙 Deploying to GitHub Pages (Recommended)
+
+Since the project source is in the `src/` directory, the easiest way to deploy is using GitHub Actions:
+
+1. Push your code to a GitHub repository.
+2. Go to **Settings** > **Pages**.
+3. Under **Build and deployment** > **Source**, select **GitHub Actions**.
+4. The included `deploy.yml` workflow (if present) will automatically handle the deployment from the `src/` folder whenever you push to the `main` branch.
+
+### ⚡ Deploying to Netlify / Vercel / Render
+
+1. Connect your GitHub repository to Netlify, Vercel, or Render.
+2. Configure the **Build Settings**:
+   - **Build Command**: (Leave blank)
+   - **Publish Directory**: `src`
+3. Click **Deploy**.
+
 ## 🧪 Testing
 
 The project includes automated UI tests using Python and Playwright.

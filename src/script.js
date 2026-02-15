@@ -77,8 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealCallback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log('Revealing:', entry.target.tagName, entry.target.className);
-
                 const target = entry.target;
                 let animationProps = {
                     targets: target,
@@ -98,9 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const observer = new IntersectionObserver(revealCallback, {
-        threshold: 0.1
-    });
+    const observer = new IntersectionObserver(revealCallback, observerOptions);
 
     document.querySelectorAll('.char-card, .news-item, .section-title').forEach(el => {
         el.style.opacity = '0';
